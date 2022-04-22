@@ -150,26 +150,14 @@
    </head>
    <body>
       <h1> Songs of Names</h1>
-      <h2> Test</h2>
-      <form id="searchForm">
-         <label for="searchName">Name to Search:</label><br>
-         <input type="text" id="searchName" name="searchName"><br>
-         <button type="submit" id="submit" value="Submit" onclick="logSubmit()">Submit</button>
-      </form>
-      <p id="log"></p>
-      <script>
-        //Function grabs the value of search 
-         function logSubmit(event) {
-         console.log(searchInput)
-        
-         console.log(returnSearchInput)
-         event.preventDefault();
-         return returnSearchInput;
-         }
-         const searchInput =document.getElementById("searchName").value;
-         returnSearchInput = searchInput
-         console.log(returnSearchInput)
-         
-      </script>
+      <input id="searchName" placeholder="Enter a name"><br>
+      <button onclick="onSubmission()" id="submitBtn">Submit</button>
    </body>
+
+   <script>
+     function onSubmission(){
+       var searchInput =document.getElementById("searchName").value;
+       console.log(searchInput)
+     }
+   </script>
 </html>
